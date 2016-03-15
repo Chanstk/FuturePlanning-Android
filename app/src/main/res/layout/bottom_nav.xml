@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    xmlns:hey="http://schemas.android.com/apk/res-auto"
+    android:background="#dfe2e4"
+    android:orientation="horizontal">
+
+    <com.example.chanst.futureplan.DIYWidge.changeColorIconWithText
+        android:id="@+id/bot_main"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:padding="5dp"
+        hey:mColor="@color/colorPrimary"
+        hey:mIcon="@drawable/course"
+        hey:mText="首页"
+        hey:mText_Size="13sp" />
+
+    <com.example.chanst.futureplan.DIYWidge.changeColorIconWithText
+        android:id="@+id/bot_chanllenge"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:padding="5dp"
+        hey:mColor="@color/colorPrimary"
+        hey:mIcon="@drawable/course"
+        hey:mText="挑战"
+        hey:mText_Size="13sp" />
+
+    <com.example.chanst.futureplan.DIYWidge.changeColorIconWithText
+        android:id="@+id/bot_show"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:padding="5dp"
+        hey:mColor="@color/colorPrimary"
+        hey:mIcon="@drawable/course"
+        hey:mText="学族秀"
+        hey:mText_Size="13sp" />
+
+    <com.example.chanst.futureplan.DIYWidge.changeColorIconWithText
+        android:id="@+id/bot_intro"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:padding="5dp"
+        hey:mColor="@color/colorPrimary"
+        hey:mIcon="@drawable/course"
+        hey:mText="推荐"
+        hey:mText_Size="13sp" />
+
+    <com.example.chanst.futureplan.DIYWidge.changeColorIconWithText
+        android:id="@+id/bot_me"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:padding="5dp"
+        hey:mColor="@color/colorPrimary"
+        hey:mIcon="@drawable/course"
+        hey:mText="个人"
+        hey:mText_Size="13sp" />
+
+</LinearLayout>
