@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/textview_style_taskdetail_background"
+    android:orientation="vertical"
+    android:padding="15dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#353335"
+        android:text="相关的工作岗位"/>
+    <GridLayout
+        android:columnCount="3"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/textview_style_taskdetail"
+            android:gravity="center"
+            android:text="地区总经理" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/textview_style_taskdetail"
+            android:gravity="center"
+            android:text="博主" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/textview_style_taskdetail"
+            android:gravity="center"
+            android:text="首席创新官" />>
+    </GridLayout>
+
+</LinearLayout>

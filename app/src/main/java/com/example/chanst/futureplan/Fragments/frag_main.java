@@ -1,6 +1,8 @@
 package com.example.chanst.futureplan.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -18,8 +20,9 @@ import android.widget.TextView;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
-import com.example.chanst.futureplan.Bean.itemBean;
+import com.example.chanst.futureplan.Bean.ListViewItemBean;
 import com.example.chanst.futureplan.R;
+import com.example.chanst.futureplan.activity.ConsultActivity;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -32,10 +35,11 @@ public class frag_main extends Fragment {
     private ScrollView scrollView;
     private View view;
     private ListView listView;
-    private List<itemBean> dataList = new ArrayList<itemBean>();
+    private List<ListViewItemBean> dataList ;
     private listAdapter adapter;
     private ConvenientBanner convenientBanner;
     private ArrayList<Integer> localImages = new ArrayList<Integer>();
+    Drawable photo;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -60,12 +64,16 @@ public class frag_main extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), ConsultActivity.class);
+                startActivity(intent);
             }
         });
-        dataList.add(new itemBean("Shabby", "CTO", "百度", "机器学习"));
-        dataList.add(new itemBean("Nina", "产品经理", "UBER", "互联网"));
-        dataList.add(new itemBean("Raja", "程序员", "小米", "互联网"));
+        photo = getResources().getDrawable(R.drawable.course);
+        dataList = new ArrayList<ListViewItemBean>();
+        dataList.add(new ListViewItemBean(photo,"Shabby", "CTO", "百度", "机器学习"));
+        dataList.add(new ListViewItemBean(photo,"Nina", "产品经理", "UBER", "互联网"));
+        dataList.add(new ListViewItemBean(photo,"Raja", "程序员", "小米", "互联网"));
         adapter = new listAdapter(dataList);
         listView.setAdapter(adapter);
         listView.addHeaderView(header);
@@ -108,8 +116,8 @@ public class frag_main extends Fragment {
         convenientBanner.stopTurning();
     }
     protected class listAdapter extends BaseAdapter {
-        private List<itemBean> list;
-        public listAdapter(List<itemBean> list) {
+        private List<ListViewItemBean> list;
+        public listAdapter(List<ListViewItemBean> list) {
             this.list = list;
         }
 
@@ -139,16 +147,18 @@ public class frag_main extends Fragment {
                 holder.position = (TextView) view.findViewById(R.id.item_position);
                 holder.tag1 = (TextView) view.findViewById(R.id.item_tag1);
                 holder.tag2 = (TextView) view.findViewById(R.id.item_tag2);
+                holder.photo = (ImageView) view.findViewById(R.id.item_poster);
                 view.setTag(holder);
             } else {
                 holder = (ViewHolder) view.getTag();
             }
-            itemBean bean = list.get(position);
+            ListViewItemBean bean = list.get(position);
             if (bean != null) {
                 holder.name.setText(bean.name);
                 holder.position.setText(bean.postion);
                 holder.tag1.setText(bean.tag1);
                 holder.tag2.setText(bean.tag2);
+                holder.photo.setImageDrawable(bean.photo);
             }
             return view;
         }
@@ -156,6 +166,7 @@ public class frag_main extends Fragment {
 
     static class ViewHolder {
         TextView name, position, tag1, tag2;
+        ImageView photo;
     }
     public class LocalImageHolderView implements Holder<Integer> {
         private ImageView imageView;

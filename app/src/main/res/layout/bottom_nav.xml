@@ -19,7 +19,7 @@
         hey:mText_Size="13sp" />
 
     <com.example.chanst.futureplan.DIYWidge.changeColorIconWithText
-        android:id="@+id/bot_chanllenge"
+        android:id="@+id/bot_task"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
         android:layout_weight="1"

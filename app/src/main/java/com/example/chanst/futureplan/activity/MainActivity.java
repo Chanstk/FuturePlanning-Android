@@ -10,7 +10,7 @@ import android.view.View;
 import com.example.chanst.futureplan.DIYWidge.changeColorIconWithText;
 import com.example.chanst.futureplan.DIYWidge.fragmentPagerAdapter;
 import com.example.chanst.futureplan.R;
-import com.example.chanst.futureplan.Fragments.frag_chanllenge;
+import com.example.chanst.futureplan.Fragments.frag_task;
 import com.example.chanst.futureplan.Fragments.frag_intro;
 import com.example.chanst.futureplan.Fragments.frag_main;
 import com.example.chanst.futureplan.Fragments.frag_me;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     private List<String> titleList = new ArrayList<String>();
     private FragmentPagerAdapter adapter;
     private frag_main fragMain;
-    private frag_chanllenge fragChanllenge;
+    private frag_task fragtask;
     private frag_show fragShow;
     private frag_intro fragIntro;
     private frag_me fragMe;
@@ -40,12 +40,12 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     private void initEnvents() {
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         fragMain = new frag_main();
-        fragChanllenge = new frag_chanllenge();
+        fragtask = new frag_task();
         fragShow = new frag_show();
         fragIntro = new frag_intro();
         fragMe = new frag_me();
         fragList.add(fragMain);
-        fragList.add(fragChanllenge);
+        fragList.add(fragtask);
         fragList.add(fragShow);
         fragList.add(fragIntro);
         fragList.add(fragMe);
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         changeColorIconWithText one = (changeColorIconWithText) findViewById(R.id.bot_main);
         one.setOnClickListener(this);
         tabIndicators.add(one);
-        changeColorIconWithText two = (changeColorIconWithText) findViewById(R.id.bot_chanllenge);
+        changeColorIconWithText two = (changeColorIconWithText) findViewById(R.id.bot_task);
         two.setOnClickListener(this);
         tabIndicators.add(two);
         changeColorIconWithText three = (changeColorIconWithText) findViewById(R.id.bot_show);
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
                 tabIndicators.get(0).setIconAlpha(1.0f);
                 viewPager.setCurrentItem(0,false);
                 break;
-            case R.id.bot_chanllenge:
+            case R.id.bot_task:
                 tabIndicators.get(1).setIconAlpha(1.0f);
                 viewPager.setCurrentItem(1,false);
                 break;

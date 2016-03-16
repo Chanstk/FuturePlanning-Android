@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/textview_style_consult"
+            android:hint="搜索你想要的技能和职位，进行练习" />
+    </LinearLayout>
+
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"
+        android:padding="2dp"
+        android:verticalSpacing="5dp"></GridView>
+</LinearLayout>
