@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+    android:padding="2dp"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="50dp"
     xmlns:hey="http://schemas.android.com/apk/res-auto"
     android:background="#dfe2e4"
     android:orientation="horizontal">
@@ -14,9 +14,10 @@
         android:layout_weight="1"
         android:padding="5dp"
         hey:mColor="@color/colorPrimary"
-        hey:mIcon="@drawable/course"
+        hey:mIcon="@drawable/t1"
         hey:mText="首页"
-        hey:mText_Size="13sp" />
+        hey:mText_Color = "#979191"
+        hey:mText_Size="10sp" />
 
     <com.example.chanst.futureplan.DIYWidge.changeColorIconWithText
         android:id="@+id/bot_task"
@@ -25,9 +26,10 @@
         android:layout_weight="1"
         android:padding="5dp"
         hey:mColor="@color/colorPrimary"
-        hey:mIcon="@drawable/course"
+        hey:mIcon="@drawable/t2"
+        hey:mText_Color = "@color/colorPrimary"
         hey:mText="挑战"
-        hey:mText_Size="13sp" />
+        hey:mText_Size="10sp" />
 
     <com.example.chanst.futureplan.DIYWidge.changeColorIconWithText
         android:id="@+id/bot_show"
@@ -36,9 +38,10 @@
         android:layout_weight="1"
         android:padding="5dp"
         hey:mColor="@color/colorPrimary"
-        hey:mIcon="@drawable/course"
-        hey:mText="学族秀"
-        hey:mText_Size="13sp" />
+        hey:mText_Color = "@color/colorPrimary"
+        hey:mIcon="@drawable/t3"
+        hey:mText="技能盒子"
+        hey:mText_Size="10sp" />
 
     <com.example.chanst.futureplan.DIYWidge.changeColorIconWithText
         android:id="@+id/bot_intro"
@@ -46,20 +49,22 @@
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:padding="5dp"
+        hey:mText_Color = "@color/colorPrimary"
         hey:mColor="@color/colorPrimary"
-        hey:mIcon="@drawable/course"
+        hey:mIcon="@drawable/t4"
         hey:mText="推荐"
-        hey:mText_Size="13sp" />
+        hey:mText_Size="10sp" />
 
     <com.example.chanst.futureplan.DIYWidge.changeColorIconWithText
         android:id="@+id/bot_me"
         android:layout_width="0dp"
+        hey:mText_Color = "@color/colorPrimary"
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:padding="5dp"
         hey:mColor="@color/colorPrimary"
-        hey:mIcon="@drawable/course"
+        hey:mIcon="@drawable/t5"
         hey:mText="个人"
-        hey:mText_Size="13sp" />
+        hey:mText_Size="10sp" />
 
 </LinearLayout>

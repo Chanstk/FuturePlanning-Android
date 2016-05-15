@@ -1,83 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="#f5f4f5"
+    android:layout_height="270dp"
+    android:background="@color/colorBK"
     android:orientation="vertical">
     <ImageView
         android:id="@+id/gridview_item_photo"
         android:background="#000000"
-        android:padding="5dp"
         android:layout_width="200dp"
-        android:layout_height="150dp" />
+        android:layout_height="130dp" />
     <TextView
         android:id="@+id/gridview_item_tile"
         android:padding="5dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:text="这里是标题"
         android:gravity="center"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:id="@+id/gridview_item_company"
-        android:text="大众集团"
-        android:gravity="center"/>
     <LinearLayout
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/heart"/>
         <TextView
+            android:id="@+id/gridview_item_applications"
+            android:textColor="@color/pink"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="150人参与战斗"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/gridview_item_daysLeft"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="剩余天数"/>
         <TextView
+            android:id="@+id/gridview_item_award1"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="鼓励奖"/>
         <TextView
+            android:id="@+id/gridview_item_award2"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="优胜奖"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:gravity="center"
-            android:id="@+id/gridview_item_days"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="23天"/>
-        <TextView
-            android:gravity="center"
-            android:id="@+id/gridview_item_sec"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="150RMB"/>
-        <TextView
-            android:gravity="center"
-            android:id="@+id/gridview_item_top"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="500RMB"/>
-    </LinearLayout>
+
 
 </LinearLayout>

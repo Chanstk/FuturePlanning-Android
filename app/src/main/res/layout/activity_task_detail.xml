@@ -3,103 +3,205 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     tools:context="com.example.chanst.futureplan.activity.TaskDetailActivity">
 
     <LinearLayout
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
+        <ImageView
+            android:src="@drawable/flower"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="任我花"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="定义一下你理想的虚拟银行"
             android:textColor="@color/colorFontBlack"
-            android:textSize="20sp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="973次浏览 2016-3-15"
-            android:textSize="10sp" />
-        <ImageView
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@color/colorPrimary"
-            />
+            android:textSize="20sp"
+            android:id="@+id/task_detail_title" />
         <View
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
+            android:layout_marginTop="10dp"
             android:background="#999998"></View>
-        <TextView
-            android:layout_width="match_parent"
+
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="任务侧重点"/>
+            android:src="@drawable/b11"
+            android:id="@+id/task_detail_photo" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#999998"></View>
+
         <LinearLayout
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
-            <TextView
-                android:text="用户体验"
-                android:id="@+id/task_detail_tag1"
-                android:layout_marginLeft="10dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/textview_style_taskdetail"
-                android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/tab"/>
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                />
-            <TextView
-                android:text="产品开发"
-                android:id="@+id/task_detail_tag2"
-                android:layout_marginLeft="10dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/textview_style_taskdetail"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                />
-            <TextView
-                android:text="银行业"
-                android:id="@+id/task_detail_tag3"
-                android:layout_marginLeft="10dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/textview_style_taskdetail"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/task_detail_tag1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_style_taskdetail"
+                    android:gravity="center"
+                    android:text="用户体验"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/task_detail_tag2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_style_taskdetail"
+                    android:gravity="center"
+                    android:text="产品开发"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/task_detail_tag3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_style_taskdetail"
+                    android:gravity="center"
+                    android:text="银行业"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
         </LinearLayout>
+
+
+
         <View
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
+            android:layout_marginTop="10dp"
             android:background="#999998"></View>
-        <TextView
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="任务简介任务简介任务简介任务简介任务简
-            介任务简介任务简介任务简介任务简介任务简介任务简介任务简介
-            任务简介任务简介任务简介任务简介任务简介任务简介任务简介任
-            务简介任务简介任务简介任务简介任务简介"/>
+            android:background="@color/gray"
+            android:orientation="horizontal"
+            android:padding="5dp">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/red" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="背景说明"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="大多数银行通过实体银行、ATM机以及其他面对面的服务来建立客户基础。我们相信银行业发展的下一波浪潮中，银行一定会变成虚拟的，利用技术将银行变得更容易接触，用户体验更加友好以及更加高效的。 其中，对于我们的虚拟银行来说，一个最大的用户群体将是千禧一代——大学学生以及应届毕业生们。我们需要你认真地定义一下你理想的虚拟银行，因而我们可以在将来更好地服务于你。"
+            android:id="@+id/task_detail_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="交付成果"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="提交答案如下所示：\n 1.当前的银行\n ∙你何时以及如何选择了当前使用的银行？\n ∙你喜欢这个银行的什么部分？\n ∙你希望的你银行在哪方面可以做的不同？\n 2.服务\n ∙什么样的新的或者改进的服务会让你考虑换一家银行？\n ∙独特的奖励和激励措施可能会影响你的银行选择吗?\n 3.虚拟的实体的\n ∙有哪一件部分我们可以建立得比实体银行更好地服务于你\n ∙有哪一部分脱离了实体店面我们可能不能做得很好？有什么方法可以解决这一问题？"
+            android:id="@+id/task_detail_result"></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="标准"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="最好的想法应该是新颖的，容易理解的，且有一个很大的潜在影响力来吸引新账户持有人。"
+            android:id="@+id/task_detail_standard"></TextView>
+        <TextView
+            android:onClick="joinIn"
+            android:layout_marginTop="20dp"
+            android:id="@+id/joinIn"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/textview_style_taskdetail"
+            android:gravity="center"
+            android:text="立即参与"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
+
 </ScrollView>

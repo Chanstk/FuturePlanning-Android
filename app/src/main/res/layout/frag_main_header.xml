@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#e4e2e2"
     xmlns:hey="http://schemas.android.com/apk/res-auto">
 
     <com.bigkoo.convenientbanner.ConvenientBanner xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -20,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="5dp"
-            hey:mIcon="@drawable/course"
+            hey:mIcon="@drawable/main_2"
             hey:mText="导师" />
 
         <com.example.chanst.futureplan.DIYWidge.changeColorIconWithText
@@ -28,15 +29,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="5dp"
-            hey:mIcon="@drawable/course"
-            hey:mText="导师" />
+            hey:mIcon="@drawable/main_3"
+            hey:mText="职业规划" />
 
         <com.example.chanst.futureplan.DIYWidge.changeColorIconWithText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="5dp"
-            hey:mIcon="@drawable/course"
-            hey:mText="导师" />
+            hey:mIcon="@drawable/main_2"
+            hey:mText="志愿" />
     </LinearLayout>
 </LinearLayout>

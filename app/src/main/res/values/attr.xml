@@ -5,12 +5,13 @@
     <attr name="mColor" format="color"></attr>
     <attr name="mText" format="string"></attr>
     <attr name="mText_Size" format="dimension"></attr>
-
+    <attr name="mText_Color" format="color"></attr>
     <declare-styleable name="changeColorIconWithText">
         <attr name="mIcon"></attr>
         <attr name="mColor"></attr>
         <attr name="mText"></attr>
         <attr name="mText_Size"></attr>
+        <attr name="mText_Color"></attr>
     </declare-styleable>
 
 </resources>

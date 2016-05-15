@@ -39,7 +39,7 @@ public class frag_main extends Fragment {
     private listAdapter adapter;
     private ConvenientBanner convenientBanner;
     private ArrayList<Integer> localImages = new ArrayList<Integer>();
-    Drawable photo;
+    Drawable[] photo;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -69,11 +69,20 @@ public class frag_main extends Fragment {
                 startActivity(intent);
             }
         });
-        photo = getResources().getDrawable(R.drawable.course);
+        photo = new Drawable[8];
+        photo[0] = getResources().getDrawable(R.drawable.p1);
+        photo[1] = getResources().getDrawable(R.drawable.p2);
+        photo[2] = getResources().getDrawable(R.drawable.p3);
+        photo[3] = getResources().getDrawable(R.drawable.p4);
+        photo[4] = getResources().getDrawable(R.drawable.p5);
+        photo[5] = getResources().getDrawable(R.drawable.p6);
+        photo[6] = getResources().getDrawable(R.drawable.p7);
+        photo[7] = getResources().getDrawable(R.drawable.p8);
         dataList = new ArrayList<ListViewItemBean>();
-        dataList.add(new ListViewItemBean(photo,"Shabby", "CTO", "百度", "机器学习"));
-        dataList.add(new ListViewItemBean(photo,"Nina", "产品经理", "UBER", "互联网"));
-        dataList.add(new ListViewItemBean(photo,"Raja", "程序员", "小米", "互联网"));
+        dataList.add(new ListViewItemBean("1.可口可乐的营销是如何做的？\n2.在快消工作是一种怎样的体验？",photo[4],"392人参加",photo[0],"Nina", "CTO", "百度", "机器学习"));
+        dataList.add(new ListViewItemBean("1.金融行业择业范围及岗位介绍？\n2.大二大三学生如何完善自己应对择业就业？",photo[5],"140人参加",photo[1],"乔洪波", "审计经理", "审计经理", "北京交通大学"));
+        dataList.add(new ListViewItemBean("1.可口可乐的营销是如何做的？\n2.在快消工作是一种怎样的体验？",photo[6],"557人参加",photo[2],"Arrow", "亚太区经理", "人力资源", "资讯行业"));
+        dataList.add(new ListViewItemBean("1.产品经理究竟是什么？\n2.网易面试经历分享？",photo[7],"346人参加",photo[3],"魏吉永", "产品经理", "网易", "南京大学"));
         adapter = new listAdapter(dataList);
         listView.setAdapter(adapter);
         listView.addHeaderView(header);
@@ -81,8 +90,8 @@ public class frag_main extends Fragment {
 
     private void loadImageDatas() {
         //本地图片集合
-        for (int position = 0; position < 3; position++)
-            localImages.add(getResId("ic_test_" + position, R.drawable.class));
+        for (int position = 1; position <= 3; position++)
+            localImages.add(getResId("cir" + position, R.drawable.class));
     }
 
     /**
@@ -143,11 +152,14 @@ public class frag_main extends Fragment {
             if (view == null) {
                 view = getActivity().getLayoutInflater().inflate(R.layout.listview_item, null);
                 holder = new ViewHolder();
+                holder.number = (TextView) view.findViewById(R.id.item_number);
                 holder.name = (TextView) view.findViewById(R.id.item_name);
                 holder.position = (TextView) view.findViewById(R.id.item_position);
                 holder.tag1 = (TextView) view.findViewById(R.id.item_tag1);
+                holder.content = (TextView) view.findViewById(R.id.item_content);
                 holder.tag2 = (TextView) view.findViewById(R.id.item_tag2);
-                holder.photo = (ImageView) view.findViewById(R.id.item_poster);
+                holder.poster_photo = (ImageView) view.findViewById(R.id.item_poster);
+                holder.person_photo = (ImageView) view.findViewById(R.id.item_Person_photo);
                 view.setTag(holder);
             } else {
                 holder = (ViewHolder) view.getTag();
@@ -158,15 +170,18 @@ public class frag_main extends Fragment {
                 holder.position.setText(bean.postion);
                 holder.tag1.setText(bean.tag1);
                 holder.tag2.setText(bean.tag2);
-                holder.photo.setImageDrawable(bean.photo);
+                holder.poster_photo.setImageDrawable(bean.poster);
+                holder.person_photo.setImageDrawable(bean.photo);
+                holder.number.setText(bean.number);
+                holder.content.setText(bean.content);
             }
             return view;
         }
     }
 
     static class ViewHolder {
-        TextView name, position, tag1, tag2;
-        ImageView photo;
+        TextView name, position, tag1, tag2,number,content;
+        ImageView poster_photo,person_photo;
     }
     public class LocalImageHolderView implements Holder<Integer> {
         private ImageView imageView;

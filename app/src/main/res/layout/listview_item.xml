@@ -3,30 +3,39 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:padding="8dp"
+    android:background="@drawable/textview_style_consult"
     android:layout_height="match_parent">
-    <LinearLayout
-        android:padding="5dp"
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/bkkk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="5"
-            android:layout_height="wrap_content"
-            android:text="分享会精华"
-            android:textSize="18sp"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="全部"
-            android:textSize="18sp"/>
-    </LinearLayout>
-    <ImageView
-        android:id="@+id/item_poster"
+        android:textColor="#FFFFFF"
+        android:text="分享会精华"
+        android:textSize="18sp"/>
+    <FrameLayout
+        android:layout_marginTop="3dp"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:background="#000000"/>
+        android:layout_height="180dp">
+
+        <ImageView
+            android:id="@+id/item_poster"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#000000"/>
+        <TextView
+            android:id="@+id/item_number"
+            android:padding="5dp"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:text="333人已参加"
+            android:textColor="#f51919"
+            />
+    </FrameLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -36,7 +45,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:padding="5dp"
-            android:background="#959333"
             android:id="@+id/item_Person_photo"/>
         <LinearLayout
             android:padding="5dp"
@@ -94,6 +102,42 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/content"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_content"
+                android:text="可口可了\n 在快消工作"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/time"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11-07 15:00-16:30"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

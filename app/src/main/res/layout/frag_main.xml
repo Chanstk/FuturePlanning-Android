@@ -3,10 +3,14 @@
     android:id="@+id/srcoll"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#B3B3CD"
     android:orientation="vertical">
 
     <ListView
-        android:dividerHeight="5dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:dividerHeight="8dp"
+        android:divider="#B3B3CD"
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></ListView>

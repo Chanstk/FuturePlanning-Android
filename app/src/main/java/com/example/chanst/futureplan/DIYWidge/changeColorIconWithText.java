@@ -22,6 +22,7 @@ import com.example.chanst.futureplan.R;
 
 public class changeColorIconWithText extends View {
     private int color = 0xFF45C01A;
+    private int tColor = 0x000000;
     private Bitmap iconBitmap;
     private String text = "΢��";
     private int textSize = (int) TypedValue.applyDimension(
@@ -60,6 +61,9 @@ public class changeColorIconWithText extends View {
                 case R.styleable.changeColorIconWithText_mColor:
                     color = a.getColor(attr, 0xFF45C01A);
                     break;
+                case R.styleable.changeColorIconWithText_mText_Color:
+                    tColor = a.getColor(attr, 0xFF45C01A);
+                    break;
                 case R.styleable.changeColorIconWithText_mText:
                     text = a.getString(attr);
                     break;
@@ -74,7 +78,7 @@ public class changeColorIconWithText extends View {
         textBonund = new Rect();
         textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         textPaint.setTextSize(textSize);
-        textPaint.setColor(0Xff555555);
+        textPaint.setColor(color);
         textPaint.getTextBounds(text, 0, text.length(), textBonund);
     }
 
@@ -122,7 +126,7 @@ public class changeColorIconWithText extends View {
     // ����ԭ�ı�
     private void drawSourceText(Canvas canvas2, int int_alpha) {
         // TODO Auto-generated method stub
-        textPaint.setColor(0xff333333);
+        textPaint.setColor(tColor);
         textPaint.setAlpha(255 - int_alpha);
         int x = getMeasuredWidth() / 2 - textBonund.width() / 2;
         int y = iconRect.bottom + textBonund.height();
