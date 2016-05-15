@@ -5,15 +5,7 @@
     android:padding="8dp"
     android:background="@drawable/textview_style_consult"
     android:layout_height="match_parent">
-    <TextView
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:background="@drawable/bkkk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:text="分享会精华"
-        android:textSize="18sp"/>
+
     <FrameLayout
         android:layout_marginTop="3dp"
         android:layout_width="match_parent"

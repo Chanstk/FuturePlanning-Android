@@ -20,6 +20,7 @@ public class TaskDetailActivity extends AppCompatActivity implements View.OnClic
     private Context mContext;
     private Intent intent;
     private int n = 0;
+    private boolean fav = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,11 +97,22 @@ public class TaskDetailActivity extends AppCompatActivity implements View.OnClic
     }
     private void CreateMenu(Menu menu)
     {
-        MenuItem mnu1 = menu.add(0, 0, 0, "Item 1");
+        final MenuItem mnu1 = menu.add(0, 0, 0, "Item 1");
         {
             mnu1.setIcon(R.drawable.task_detail_heart);
             mnu1.setShowAsAction(
                     MenuItem.SHOW_AS_ACTION_IF_ROOM);
+            mnu1.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    fav = !fav;
+                    if(fav)
+                        mnu1.setIcon(R.drawable.task_detail_heart_red);
+                    else
+                        mnu1.setIcon(R.drawable.task_detail_heart);
+                    return false;
+                }
+            });
         }
         MenuItem mnu2 = menu.add(0, 1, 1, "Item 2");
         {

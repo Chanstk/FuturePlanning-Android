@@ -30,6 +30,7 @@ public class frag_task extends Fragment implements View.OnClickListener {
     private View view;
     private GridView gridView;
     private Drawable photo;
+    private ImageView iv1,iv2,iv3,iv4;
     private List<GridViewItemBean> dataList1,dataList2,dataList3,dataList4;
     private listAdapter adapter;
     private LinearLayout l1,l2,l3,l4;
@@ -43,6 +44,10 @@ public class frag_task extends Fragment implements View.OnClickListener {
 
     private void initEvents() {
         gridView = (GridView) view.findViewById(R.id.gridview);
+        iv1 = (ImageView) view.findViewById(R.id.frag_task_tab1);
+        iv2 = (ImageView) view.findViewById(R.id.frag_task_tab2);
+        iv3 = (ImageView) view.findViewById(R.id.frag_task_tab3);
+        iv4 = (ImageView) view.findViewById(R.id.frag_task_tab4);
         LoadData();
 
         adapter = new listAdapter(dataList1);
@@ -85,22 +90,23 @@ public class frag_task extends Fragment implements View.OnClickListener {
         dataList1.add(new GridViewItemBean(getResources().getDrawable(R.drawable.p31),"9\n剩余天数", "你的打字速度不能再慢了！","89","1500学币\n每天","4学分\n每天"));
         dataList1.add(new GridViewItemBean(getResources().getDrawable(R.drawable.p32),"13\n剩余天数", "虽然你过了六级，但是你仍旧需要这份差事","73","880学币\n每天","5学分\n每天"));
         dataList2 = new ArrayList<GridViewItemBean>();
-        dataList2.add(new GridViewItemBean(getResources().getDrawable(R.drawable.b11),"15\n剩余天数", "定义你理想中的虚拟银行","256"," 350学币×4\n优胜奖","4学分"));
-        dataList2.add(new GridViewItemBean(getResources().getDrawable(R.drawable.b12),"23\n剩余天数", "如何在城市中试用你的虚拟汽车钥匙","59","500学币×3\n优胜奖","5学分"));
+        dataList2.add(new GridViewItemBean(getResources().getDrawable(R.drawable.b11),"15\n剩余天数", "定义你理想中的虚拟银行","256"," 350学币×4\n优胜奖","4\n学分"));
+        dataList2.add(new GridViewItemBean(getResources().getDrawable(R.drawable.b12),"23\n剩余天数", "如何在城市中试用你的虚拟汽车钥匙","59","500学币×3\n优胜奖","5\n学分"));
         dataList2.add(new GridViewItemBean(getResources().getDrawable(R.drawable.b21),"23\n剩余天数", "如何让H5在app上得到最好的利用","199","500学币×10\n鼓励奖","700学币×3\n优胜奖"));
-        dataList2.add(new GridViewItemBean(getResources().getDrawable(R.drawable.b22),"23\n剩余天数", "如果你是产品体验分析师","169","20学币\n参与即可","8学分"));
+        dataList2.add(new GridViewItemBean(getResources().getDrawable(R.drawable.b22),"23\n剩余天数", "如果你是产品体验分析师","169","20学币\n参与即可","8\n学分"));
         dataList2.add(new GridViewItemBean(getResources().getDrawable(R.drawable.b31),"50\n剩余天数", "你笔下的校服，山区孩子的梦","145","20学币\n参与即可","350学币\n优胜奖"));
-        dataList2.add(new GridViewItemBean(getResources().getDrawable(R.drawable.b32),"10\n剩余天数", "你会写广告语吗？小心才气侧漏","98","100学币\n优胜奖","8学分"));
+        dataList2.add(new GridViewItemBean(getResources().getDrawable(R.drawable.b32),"10\n剩余天数", "你会写广告语吗？小心才气侧漏","98","100学币\n优胜奖","8\n学分"));
         dataList2.add(new GridViewItemBean(getResources().getDrawable(R.drawable.b41),"14\n剩余天数", "让我的美食APP吸引更多的美食爱好者","401","22学币\n鼓励奖","66学币\n优胜奖"));
         dataList2.add(new GridViewItemBean(getResources().getDrawable(R.drawable.b42),"25\n剩余天数", "打造你的天气工具，可以引导至最热门地点","354","78学币\n鼓励奖","100学币\n优胜奖"));
         dataList3 = new ArrayList<GridViewItemBean>();
         dataList3.add(new GridViewItemBean(getResources().getDrawable(R.drawable.c11),"2\n剩余天数", "你的学习能力强吗？销售顾问可不简单哦！","86","2000学币\n每天","16学分\n每天"));
         dataList3.add(new GridViewItemBean(getResources().getDrawable(R.drawable.c12),"20\n剩余天数", "万人之上的宅米店长都需要什么技能？","96","2000学币\n每月","19学分\n每天"));
+        dataList3.add(new GridViewItemBean(getResources().getDrawable(R.drawable.c21),"15\n剩余天数", "姬姿秀让你成为“管培生”","45","90000学币\n每月","20学分\n每天"));
         dataList3.add(new GridViewItemBean(getResources().getDrawable(R.drawable.c22),"12\n剩余天数", "市场推广有妙招，产品运营只差一步","40","2000学币\n每天","19学分\n每天"));
         dataList4 = new ArrayList<GridViewItemBean>();
         dataList4.add(new GridViewItemBean(getResources().getDrawable(R.drawable.d11),"15\n剩余天数", "我们公司有交流障碍，靠你了","115","321学币×10\n鼓励奖","2\n实习名额"));
         dataList4.add(new GridViewItemBean(getResources().getDrawable(R.drawable.d12),"26\n剩余天数", "提出一个可以改善人们之间日渐疏远的沟通的产品","98","321学币×7\n鼓励奖","30\n学分"));
-        dataList4.add(new GridViewItemBean(getResources().getDrawable(R.drawable.d21),"12\n剩余天数", "数据程序员，挑战等你来","74","10000学币\n每月","29学分"));
+        dataList4.add(new GridViewItemBean(getResources().getDrawable(R.drawable.d21),"12\n剩余天数", "数据程序员，挑战等你来","74","10000学币\n每月","29\n学分"));
         dataList4.add(new GridViewItemBean(getResources().getDrawable(R.drawable.d22),"10\n剩余天数", "数据分析专员，了解信息收集","81","2000学币\n每天","19学分\n每天"));
     }
 
@@ -122,20 +128,30 @@ public class frag_task extends Fragment implements View.OnClickListener {
                 break;
         }
     }
-
+    private void resetTab(){
+        iv1.setImageDrawable(getResources().getDrawable(R.drawable.bird));
+        iv2.setImageDrawable(getResources().getDrawable(R.drawable.light));
+        iv3.setImageDrawable(getResources().getDrawable(R.drawable.flag));
+        iv4.setImageDrawable(getResources().getDrawable(R.drawable.exce));
+    }
     private void changeList(int order){
+        resetTab();
         switch (order){
             case 1:
+                iv1.setImageDrawable(getResources().getDrawable(R.drawable.bird_red));
                 adapter = new listAdapter(dataList1);
                 Log.i("hehe", "hehe");
                 break;
             case 2:
+                iv2.setImageDrawable(getResources().getDrawable(R.drawable.light_red));
                 adapter = new listAdapter(dataList2);
                 break;
             case 3:
+                iv3.setImageDrawable(getResources().getDrawable(R.drawable.flag_red));
                 adapter = new listAdapter(dataList3);
                 break;
             case 4:
+                iv4.setImageDrawable(getResources().getDrawable(R.drawable.exce_red));
                 adapter = new listAdapter(dataList4);
                 break;
         }
@@ -186,7 +202,7 @@ public class frag_task extends Fragment implements View.OnClickListener {
                 holder.days.setText(bean.days);
                 holder.award1.setText(bean.award1);
                 holder.award2.setText(bean.award2);
-                holder.applications.setText(bean.applications+"参与战斗");
+                holder.applications.setText(bean.applications+"人参与战斗");
                 holder.photo.setImageDrawable(bean.photo);
             }
             return view;

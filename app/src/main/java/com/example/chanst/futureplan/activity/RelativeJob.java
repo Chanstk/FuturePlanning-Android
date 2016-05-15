@@ -10,7 +10,7 @@ import android.view.View;
 import com.example.chanst.futureplan.R;
 
 public class RelativeJob extends AppCompatActivity {
-
+    private boolean fav = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,17 +47,36 @@ public class RelativeJob extends AppCompatActivity {
     }
     private void CreateMenu(Menu menu)
     {
-        MenuItem mnu1 = menu.add(0, 0, 0, "Item 1");
+        final MenuItem mnu1 = menu.add(0, 0, 0, "Item 1");
         {
-            mnu1.setIcon(R.drawable.relative_heart);
+            mnu1.setIcon(R.drawable.task_detail_heart);
             mnu1.setShowAsAction(
                     MenuItem.SHOW_AS_ACTION_IF_ROOM);
+            mnu1.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    fav = !fav;
+                    if(fav)
+                        mnu1.setIcon(R.drawable.task_detail_heart_red);
+                    else
+                        mnu1.setIcon(R.drawable.task_detail_heart);
+                    return false;
+                }
+            });
         }
         MenuItem mnu2 = menu.add(0, 1, 1, "Item 2");
         {
             mnu2.setIcon(R.drawable.relative_slade);
             mnu2.setShowAsAction(
                     MenuItem.SHOW_AS_ACTION_IF_ROOM);
+            mnu2.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    setResult(RESULT_OK);
+                    finish();
+                    return false;
+                }
+            });
         }
 
     }

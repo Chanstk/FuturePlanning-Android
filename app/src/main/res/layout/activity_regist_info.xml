@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#2F4159"
+    android:padding="60dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chanst.futureplan.activity.RegistInfoActivity">
+    <LinearLayout
+
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="入学年份"
+            android:textColor="#FFFFFF"/>
+        <NumberPicker
+            android:background="#FFFFFF"
+            android:id="@+id/np"
+            android:layout_marginLeft="30dp"
+            android:layout_width="70dp"
+            android:layout_height="80dp"></NumberPicker>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="专业"/>
+        <EditText
+            android:textColorHint="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入专业名称"/>
+    </LinearLayout>
+    <TextView
+        android:onClick="fin"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="完成"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

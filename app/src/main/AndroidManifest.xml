@@ -28,10 +28,25 @@
             android:label="相关职业"
             android:launchMode="singleTask"
             android:parentActivityName=".activity.TaskDetailActivity" />
-        <activity android:name=".activity.SkillRequired"
+        <activity
+            android:name=".activity.SkillRequired"
             android:label="所需相关品质技能"
             android:launchMode="singleTask"
-            android:parentActivityName=".activity.RelativeJob" ></activity>
+            android:parentActivityName=".activity.RelativeJob" />
+        <activity android:name=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".activity.RegisterActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".activity.RegistInfoActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.RegisterActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 
 </manifest>

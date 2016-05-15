@@ -1,162 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-    <LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:orientation="vertical"
-        tools:context="com.example.chanst.futureplan.activity.RelativeJob">
+        android:layout_height="wrap_content">
+
         <LinearLayout
-            android:padding="10dp"
             android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_marginLeft="80dp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/left"
-                />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context="com.example.chanst.futureplan.activity.RelativeJob">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/gray" />
+
             <TextView
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="关于产品开发的技能"/>
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/right"/>
+                android:gravity="center"
+                android:onClick="jump"
+                android:padding="10dp"
+                android:text="用户体验分析师" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="jump"
+                android:padding="10dp"
+                android:text="业主/通信专家" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line"  />
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="jump"
+                android:padding="10dp"
+                android:text="地区总经理" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="jump"
+                android:padding="10dp"
+                android:text="博主" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="jump"
+                android:padding="10dp"
+                android:text="首席创新官" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="jump"
+                android:padding="10dp"
+                android:text="用户体验战略师" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line"  />
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="jump"
+                android:padding="10dp"
+                android:text="地区经理" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="jump"
+                android:padding="10dp"
+                android:text="研究助理" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="jump"
+                android:padding="10dp"
+                android:text="设计者开发者" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line"  />
         </LinearLayout>
-        <View
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width= "match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"/>
+    </ScrollView>
+    <LinearLayout
+        android:background="#B3B3CD"
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="80dp"
+            android:src="@drawable/left" />
+
         <TextView
-            android:onClick="jump"
-            android:padding="10dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height = "wrap_content"
-            android:text="用户体验分析师"/>
-        <View
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width= "match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"/>
-        <TextView
-            android:onClick="jump"
-            android:padding="10dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height = "wrap_content"
-            android:text="业主/通信专家"/>
-        <View
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width= "match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"/>
-        <TextView
-            android:onClick="jump"
-            android:padding="10dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height = "wrap_content"
-            android:text="地区总经理"/>
-        <View
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width= "match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"/>
-        <TextView
-            android:onClick="jump"
-            android:padding="10dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height = "wrap_content"
-            android:text="博主"/>
-        <View
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width= "match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"/>
-        <TextView
-            android:onClick="jump"
-            android:padding="10dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height = "wrap_content"
-            android:text="首席创新官"/>
-        <View
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width= "match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"/>
-        <TextView
-            android:onClick="jump"
-            android:padding="10dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height = "wrap_content"
-            android:text="用户体体验战略师"/>
-        <View
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width= "match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"/>
-        <TextView
-            android:onClick="jump"
-            android:padding="10dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height = "wrap_content"
-            android:text="地区经理"/>
-        <View
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width= "match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"/>
-        <TextView
-            android:onClick="jump"
-            android:padding="10dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height = "wrap_content"
-            android:text="研究助理"/>
-        <View
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width= "match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"/>
-        <TextView
-            android:onClick="jump"
-            android:padding="10dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height = "wrap_content"
-            android:text="设计者开发者"/>
-        <View
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width= "match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"/>
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="关于产品开发的技能" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/right" />
     </LinearLayout>
-</ScrollView>
+</FrameLayout>
 

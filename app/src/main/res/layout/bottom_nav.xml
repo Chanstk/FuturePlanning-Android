@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="2dp"
+    android:padding="0.10px"
     android:layout_width="match_parent"
     android:layout_height="50dp"
     xmlns:hey="http://schemas.android.com/apk/res-auto"
-    android:background="#dfe2e4"
+    android:background="#f8f9fa"
     android:orientation="horizontal">
 
     <com.example.chanst.futureplan.DIYWidge.changeColorIconWithText

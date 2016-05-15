@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 边框 -->
+    <solid android:color="#f9f9f9">
+    </solid>
+
+    <!-- 圆角 -->
+    <corners
+        android:topLeftRadius="9dp"
+        android:topRightRadius="9dp"/>
+    <!-- 边距 -->
+
+</shape>

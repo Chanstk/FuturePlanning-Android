@@ -23,6 +23,7 @@ public class SkillRequired extends AppCompatActivity {
 
     private List<GridViewItemBean> dataList;
     private listAdapter adapter;
+    private boolean fav = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,7 +88,7 @@ public class SkillRequired extends AppCompatActivity {
                 holder.days.setText(bean.days);
                 holder.award1.setText(bean.award1);
                 holder.award2.setText(bean.award2);
-                holder.applications.setText(bean.applications+"参与战斗");
+                holder.applications.setText(bean.applications+"人参与战斗");
                 holder.photo.setImageDrawable(bean.photo);
             }
             return view;
@@ -105,11 +106,22 @@ public class SkillRequired extends AppCompatActivity {
     }
     private void CreateMenu(Menu menu)
     {
-        MenuItem mnu1 = menu.add(0, 0, 0, "Item 1");
+        final MenuItem mnu1 = menu.add(0, 0, 0, "Item 1");
         {
-            mnu1.setIcon(R.drawable.relative_heart);
+            mnu1.setIcon(R.drawable.task_detail_heart);
             mnu1.setShowAsAction(
                     MenuItem.SHOW_AS_ACTION_IF_ROOM);
+            mnu1.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+
+                    if(fav)
+                        mnu1.setIcon(R.drawable.task_detail_heart_red);
+                    else
+                        mnu1.setIcon(R.drawable.task_detail_heart);
+                    return false;
+                }
+            });
         }
 
     }

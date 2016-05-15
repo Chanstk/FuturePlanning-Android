@@ -40,4 +40,25 @@
             hey:mIcon="@drawable/main_2"
             hey:mText="志愿" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#B3B3CD"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/red" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="分享会精华"
+            android:textSize="15sp" />
+
+    </LinearLayout>
 </LinearLayout>

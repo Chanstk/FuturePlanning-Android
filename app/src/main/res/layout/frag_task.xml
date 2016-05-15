@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+   <!-- <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
@@ -17,46 +17,54 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/textview_style_consult"
             android:hint="搜索你想要的技能和职位，进行练习" />
-    </LinearLayout>
+    </LinearLayout>-->
 
     <LinearLayout
+        android:background="#B3B3CD"
         android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="5dp">
         <LinearLayout
+            android:orientation="horizontal"
             android:clickable="true"
             android:id="@+id/xiao"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="5dp">
+            android:layout_weight="1">
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/bird"/>
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/bird_red"
+                android:id="@+id/frag_task_tab1" />
             <TextView
+                android:textColor="#FFFFFF"
                 android:gravity="center"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="小试牛刀"/>
         </LinearLayout>
+
         <LinearLayout
             android:clickable="true"
             android:id="@+id/chuang"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="5dp">
+            android:orientation="horizontal">
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/light"/>
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/light"
+                android:id="@+id/frag_task_tab2" />
             <TextView
+                android:textColor="#FFFFFF"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="创意种子"/>
+
         </LinearLayout>
         <LinearLayout
             android:clickable="true"
@@ -64,16 +72,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="5dp">
+            android:orientation="horizontal">
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/flag"/>
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/flag"
+                android:id="@+id/frag_task_tab3" />
             <TextView
+                android:textColor="#FFFFFF"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="实操派"/>
+
         </LinearLayout>
         <LinearLayout
             android:clickable="true"
@@ -81,16 +92,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="5dp">
+            android:orientation="horizontal">
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/exce"/>
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/exce"
+                android:id="@+id/frag_task_tab4" />
             <TextView
+                android:textColor="#FFFFFF"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="出类拔萃"/>
+
         </LinearLayout>
     </LinearLayout>
     <GridView
@@ -100,5 +114,6 @@
         android:horizontalSpacing="5dp"
         android:numColumns="2"
         android:padding="2dp"
+        android:background="@color/gray"
         android:verticalSpacing="5dp"></GridView>
 </LinearLayout>
